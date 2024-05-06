@@ -23,5 +23,5 @@ console.log(typeof personDetails);
  */
 let userName2="Dhruv";
 let age3=99;
-let text=`My name is ${userName2} and \n I'm ${age} years old.`;
+let text=`My name is ${userName2} and \nI'm ${age} years old.`;
 console.log(text);
