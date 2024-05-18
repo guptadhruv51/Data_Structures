@@ -27,3 +27,4 @@ const person2 = {
 person1.greet.call(person2);
 const greetPerson2 = person1.greet.bind(person2);
 greetPerson2();
+//bind: returns a function

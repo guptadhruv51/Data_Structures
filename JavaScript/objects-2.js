@@ -27,12 +27,13 @@ console.log(state);
 /**
  * This keyword
  * Refers to tge object that is excecuting the function
+ * Arrow function doesnto point to the object it is being declared in (refers to Window : global object)
  */
 const obj2={
 name:"Dhruv",
 displayMessage:function()
 {
-  console.log(this);
-},
+  console.log("hello"+this.name); //implicit binding
+}
 };
 obj2.displayMessage();
