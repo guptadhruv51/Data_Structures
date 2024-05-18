@@ -54,7 +54,48 @@ const obj10={
   name:"Dhruv",
   city:"Mumbai"
 }
+// prints the keys in the object 
+// obj10[item]
 for (let item in obj10)
 {
   console.log(item);
 }
+/**
+ * Object reference and shallow copy
+ * Objects are not copied by value but by reference 
+ */
+const p1={
+  name:'Prakash',
+  age:101
+}
+// const p2=p1;
+// p2.name="Ashish";
+// console.log(p1); // shallow copy
+// console.log(p2); 
+
+const p2=Object.assign({},p1); // still shallow copy 
+p2.name="Dhruv";
+console.log(p1);
+console.log(p2);
+
+/**
+ * Optional Chanining
+ */
+const user={
+  name:"Dhruv",
+  age:25,
+  address:
+  {
+    street:"Hennessy Street",
+    city:"Canberra"
+  }
+}
+console.log(user.address.city);
+if(user.address!=undefined)
+{
+  console.log(user.address.city);
+}
+else{
+  console.log("Address not found");
+}
+console.log(user.address?.city); // optional chaining 
