@@ -1,6 +1,8 @@
 let readlineSync=require("readline-sync");
+let kuler=require("kuler");
 let score=0;
 let userName=readlineSync.question("What's your name ");
+console.log(kuler(`Hello ${userName} welcome to the quiz`,"#d2626"));
 /**
  * Creating Question Answer Dataset
  */
@@ -58,12 +60,12 @@ function playGame(userAnswer, correctAnswer)
 {
 if(userAnswer===correctAnswer)
 {
-  console.log("Correct Answer");
+  console.log(kuler("Correct Answer","#059669"));
   score++;
 }
 else{
-  console.log("Incorrect Answer");
-  console.log(`The correct answer is ${correctAnswer}`);
+  console.log(kuler("Incorrect Answer","#b91c1c"));
+  console.log(kuler(`The correct answer is ${correctAnswer}`,"#059669"));
 }
 
 }
