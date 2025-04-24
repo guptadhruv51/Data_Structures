@@ -1,0 +1,28 @@
+
+.container
+{
+  display: flex;
+  text-align: center;
+}
+.container-1
+{
+  flex:50%;
+  margin: 20px;
+  
+  width:200px;
+  height:200px;
+  color: green;
+  border: 1px green solid;
+  padding: 10px;
+}
+.container-2
+{
+  flex:50%;
+  margin: 20px;
+  
+  width:200px;
+  height:200px;
+  color: blue;
+  border: 1px blue solid;
+  padding: 10px;
+}
