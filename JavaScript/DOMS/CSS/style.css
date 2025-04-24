@@ -1,0 +1,42 @@
+body{
+  margin:0px;
+}
+h4{
+  line-height: 60px;
+  padding-left: 10px;
+}
+nav{
+  background-color: navy;
+  color: white;
+  height:60px;
+  position:fixed;
+  width:100%;
+  top:0px;
+  z-index: 1;
+}
+.box
+{
+  width:200px;
+  height:200px;
+  background-color: green;
+  margin:10px;
+}
+.boxes
+{
+  margin-top: 80px;
+  
+}
+
+.rel-position
+{
+  position: relative;
+}
+.abs-position
+{
+  position:absolute;
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+  top:20px;
+  left:30px
+}
