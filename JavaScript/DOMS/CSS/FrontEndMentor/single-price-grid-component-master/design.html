@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="card">
@@ -19,20 +22,19 @@
       </div>
 <div id="bottom-section">
 <div id="bottom-left">
-<h4> Month Subscription</h4>
-<div>
-  <div>
+<h4> Monthly Subscription</h4>
+<div id="price-container">
+  <div id="price">
     $29
   </div>
-  <div>
+  <div id="price-frequency">
     per month
     </div>
     <p> Full access for less than $1 a day.
       </p>
-      <button>Sign Up</button>
+      <button onclick="alertUser()">Sign Up</button>
 </div>
-</div>
-<div id="bottom-right">
+</div><div id="bottom-right">
   <h4>Why Us</h4>
   <ul>
     <li>Tutorials by industry experts </li>
@@ -46,5 +48,12 @@
   </div>
     </div>
     </div>
+    <script>
+      function alertUser()
+      {
+        alert("Button CLicked");
+      }
+      </script>
 </body>
+
 </html>
