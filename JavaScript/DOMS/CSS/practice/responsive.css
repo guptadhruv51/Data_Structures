@@ -1,0 +1,27 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*:before,*:after{
+  box-sizing: inherit;
+}
+
+/* 576 992 */
+img{
+  width:100%
+}
+@media(min-width:576px)
+{
+  img{
+    width:49%
+  }
+
+}
+
+@media(min-width:992px)
+{
+  img{
+    width:24%
+  }
+}
+
