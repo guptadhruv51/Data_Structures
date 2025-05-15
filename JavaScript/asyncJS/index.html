@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //   console.log(" ");
+  //   console.log(" ");
+  //   console.log(" ");
+
+  //   console.log(" ");
+
+  //   setTimeout(()=>
+  // {
+  //   console.log("Arrow Function")
+  // },3000);
+  // // CallBack Functions
+
+  // function one()
+  // {
+  //   console.log("Function 1");
+  // }
+  // function two()
+  // {
+
+  //   console.log("Function 2");
+  // }
+
+  // function three(call_two)
+  // {
+  //   call_two();
+  //   console.log("Function 3")
+  // }
+  // three(two);
+let stocks=
+{
+  fruits:["strawberry", "Grapes", "apple"],
+  holder:["cone","cup","stick"],
+  liquid:["water","ice"],
+  toppings:["chocolate","peanuts"]
+};
+let order=(fruitName,call_production)=>
+{
+  setTimeout(()=>
+{
+    console.log(`Order placed for fruit ${stocks.fruits[fruitName]}`);
+    call_production();
+},2000);
+
+  
+};
+
+let production=()=>{
+  setTimeout(()=>
+{
+  console.log("Production has started");
+  setTimeout(()=>
+{
+  console.log("fruit has been chopped");
+  setTimeout(()=>
+{
+  console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} have been added`);
+},1000)
+
+},2000)
+},0);
+
+
+  
+};
+order(0,production);
+
+
+</script>
+</body>
+</html>
