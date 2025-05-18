@@ -35,6 +35,25 @@
   //   console.log("Function 3")
   // }
   // three(two);
+  let is_shop_open=true;
+  let order=(time,work)=>
+  {
+    return new Promise( (resolve,reject)=>
+  {
+        if(is_shop_open)
+        {
+          setTimeout(()=>{
+            resolve(work());
+          },time
+        );
+         
+        }
+        else{
+          reject(console.log("THe shop is closed"));
+        }
+  })
+
+  }
 let stocks=
 {
   fruits:["strawberry", "Grapes", "apple"],
@@ -42,36 +61,51 @@ let stocks=
   liquid:["water","ice"],
   toppings:["chocolate","peanuts"]
 };
-let order=(fruitName,call_production)=>
+order(2000,()=>
 {
-  setTimeout(()=>
+  console.log(`${stocks.fruits[0]} was selected`);
+}).then(
+  ()=>
 {
-    console.log(`Order placed for fruit ${stocks.fruits[fruitName]}`);
-    call_production();
-},2000);
+  return order(0,()=>console.log("Production has started"));
+}
+)
+.then(
+  ()=>
+{
+  return order(2000,()=>console.log("Fruit has been cut"));
+}
+); 
+// let order=(fruitName,call_production)=>
+// {
+//   setTimeout(()=>
+// {
+//     console.log(`Order placed for fruit ${stocks.fruits[fruitName]}`);
+//     call_production();
+// },2000);
 
   
-};
+// };
 
-let production=()=>{
-  setTimeout(()=>
-{
-  console.log("Production has started");
-  setTimeout(()=>
-{
-  console.log("fruit has been chopped");
-  setTimeout(()=>
-{
-  console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} have been added`);
-},1000)
+// let production=()=>{
+//   setTimeout(()=>
+// {
+//   console.log("Production has started");
+//   setTimeout(()=>
+// {
+//   console.log("fruit has been chopped");
+//   setTimeout(()=>
+// {
+//   console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} have been added`);
+// },1000)
 
-},2000)
-},0);
+// },2000)
+// },0);
 
 
   
-};
-order(0,production);
+// };
+// order(0,production);
 
 
 </script>
