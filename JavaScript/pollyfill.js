@@ -50,3 +50,68 @@ Array.prototype.myFilter=function(callback)
 
 const result2=arr2.myFilter(getfilter);
 console.log(result2);
+
+
+//PolyFills for reduce
+
+const arr3=[1,2,3,4,5,6,6,7];
+
+function getSum(acc,curr)
+{
+return acc+curr;
+ }
+
+const total=arr3.reduce(getSum);
+
+console.log(total);
+
+Array.prototype.myReduce=function(callback,initialVal)
+{
+  // console.log(typeof callback);
+  if(typeof(callback)!='function')
+    throw new Error("The given callback function is not a function");
+  let acc=initialVal?initialVal:this[0];
+  for(let i=initialVal?0:1;i<this.length;i++) //curr = this[i];
+  {
+      acc=callback(acc,this[i]);
+  }
+
+  return acc;
+}
+
+const ans=arr3.myReduce(getSum,0);
+console.log(ans);
+
+
+
+
+//PolyFill for flatten
+
+const arr4=[1,2,3,4,[5,6],[[7,8]]];
+
+const result4=arr4.flat(2);
+console.log(result4);
+
+Array.prototype.myFlat=function(depth=1)
+{
+  let tempArray=[];
+
+  function getFalltenArr(array,depth)
+    {
+      for(let element of array)
+      {
+        if(Array.isArray(element) &&depth)
+        {
+          getFalltenArr(element,depth--);
+        }
+        else{
+          tempArray.push(element);
+        }
+      }
+    }
+  getFalltenArr(this,depth);
+  return tempArray;
+};
+
+const result5=arr4.myFlat(2);
+console.log(result5);
