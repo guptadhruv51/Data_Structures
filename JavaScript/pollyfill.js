@@ -115,3 +115,29 @@ Array.prototype.myFlat=function(depth=1)
 
 const result5=arr4.myFlat(2);
 console.log(result5);
+
+
+//Polyfill for call 
+const obj={
+  name:'Dhruv',
+  city:'Canberra',
+};
+
+function displayInfo(state)
+{
+  console.log(`Hi, I'm ${this.name} from ${this.city}, ${state}`);
+}
+Function.prototype.myCall=function(context,...args)
+{
+  // console.log(context);
+  // console.log(this);
+  context.showMessage=this;
+  context.showMessage(...args);
+  delete context.showMessage;
+}
+
+displayInfo.myCall(obj,"ACT");
+
+
+
+
