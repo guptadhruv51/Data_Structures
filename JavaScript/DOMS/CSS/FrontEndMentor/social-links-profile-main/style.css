@@ -1,0 +1,75 @@
+body{
+  background-color: 	#141414 ;
+color: white;
+font-size: 14px;
+display: flex;
+justify-content: center;
+}
+#main-container
+{
+  height: 600px;
+  width: 400px;
+  border: 2px solid black;
+  background-color:  	 	#1f1f1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  
+}
+img{
+  margin-top: 30px;
+  border-radius: 50%;
+  height: 70px;
+   /* display: block;  */
+  /* margin: auto;  */
+  
+}
+#name
+{
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+#hobbies
+{
+  opacity: 0.8;
+}
+#location
+{
+  color: 	#c5f82a
+}
+#hobbies
+{
+  margin: 20px;
+}
+#Links
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button{
+  color: white;
+  background-color:  	#333333;
+  margin: 5px;
+  height: 40px;
+  border-radius: 10px;
+  width: 300px;
+  border: 1px black solid;
+  
+}
+button:hover
+{
+  background-color:#c5f82a ;
+  cursor: pointer;
+  color: #141414;
+  
+}
+.attribution
+{
+  margin-top: 20px;
+}
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
