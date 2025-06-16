@@ -1,0 +1,40 @@
+html{
+  box-sizing: border-box;
+}
+#main-container
+{
+  height: 100%;
+  width: 500px;
+  border: black solid 1px;
+  padding: 20px;
+}
+#heading
+{
+  height:60px;
+  width:100%;
+  /* border:black solid 2px; */
+  /* padding-bottom: 20px; */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#heading-text
+{
+  padding-left: 15px;
+}
+.list-section
+{
+  height:80px;
+  width:100%;
+  /* border:black solid 2px; */
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+.plus-icon
+{
+  padding-left: 20px;
+  margin-left: auto;
+  /* align-self: flex-end; */
+}
