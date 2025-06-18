@@ -48,6 +48,13 @@ html{
   height: 40px;
   /* align-self: flex-end; */
 }
+.minus-icon
+{
+  padding-left: 20px;
+  margin-left: auto;
+  height: 40px;
+  /* align-self: flex-end; */
+}
 .list-section
 {
   height: auto;
